@@ -70,7 +70,7 @@ print(r)
 print('\n')
 
 
-# 수동
+# 자동
 @document_info
 def sub_int(x, y):
     return x-y
@@ -196,10 +196,13 @@ class Cat():
 
 
 # 매서드: class 안에 선언된 함수 = 멤버함수
+class Cat:
+    def __init__(self):  # 첫번째 매개변수의 이름은 self
+        pass
 
 # 초기화
 class Cat:
-    def __init__(self):  # 초기화
+    def __init__(self):  # __init__()은 초기화 매서드
         pass
 
 class Pokemon:
@@ -210,8 +213,6 @@ p1 = Pokemon()  # 객체 생성
 p2 = Pokemon()
 print(p1, p2)  # 두 객체의 메모리는 서로 다름
 print('\n')
-
-
 
 
 class Pokemon:
@@ -252,6 +253,20 @@ class Pikachu(Pokemon):  # Pokemon은 부모클래스, Pikachu는 자식클래�
 pi1 = Pikachu('피카추', '덴트', '번개')
 pi1.info()
 
+
+
+
+
+class Car():
+    pass
+class Yugo(Car):
+    pass
+
+print(issubclass(Yugo, Car))
+
+# 각 클래스로부터 객체 생성
+give_me_a_car = Car()
+give_me_a_yugo = Yugo()
 
 
 
